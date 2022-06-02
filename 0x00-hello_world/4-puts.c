@@ -1,4 +1,3 @@
-#!/bin/bash
 #include <stdio.h>
 
 /*this prints a sentence*/
