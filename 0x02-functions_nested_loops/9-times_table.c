@@ -16,7 +16,8 @@ void times_table(void)
 		for (n = 0; n <= 9; n++)
 		{
 			h = n * l;
-			printf("%d, \n", h);
+			printf("%d, ", h);
 		}
+		printf("\n");
 	}
 }
