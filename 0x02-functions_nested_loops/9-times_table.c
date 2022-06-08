@@ -9,20 +9,16 @@
 
 void times_table(void)
 {
-	int l, n;
+	int l, n, h;
 
 	for (l = 0; l <= 9; l++)
 	{
 		for (n = 0; n <= 9; n++)
 		{
-			printf("%d*%d",n,l);
-			if (n < 9)
-			{
+			h = n * l;
+			printf("%d", h);
 			_putchar(',');
 			_putchar(' ');
-			}
-			else
-				break;
 		}
 		_putchar('\n');
 	}
