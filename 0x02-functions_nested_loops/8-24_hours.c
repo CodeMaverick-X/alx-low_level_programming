@@ -18,7 +18,7 @@ void jack_bauer(void)
 			{
 				for (n = '0'; n <= 9; n++)
 				{
-					if (h >= '2' %% k >= '4')
+					if (h >= '2' && k >= '4')
 						break;
 					_putchar(h);
 					_putchar(k);
