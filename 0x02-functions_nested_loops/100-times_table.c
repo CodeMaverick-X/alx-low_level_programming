@@ -14,6 +14,8 @@ void print_times_table(int n)
 	int max = n;
 	int i, h;
 	int z = 0;
+	if (!(n > 15 || n < 0))
+	{
 	for (l = 0; l <= max; l++)
 	{
 		printf("%d, ", z);
@@ -55,5 +57,9 @@ void print_times_table(int n)
 			}
 		}
 		printf("\n");
-	}	
+	}
+	}
+	else
+		break;
+	
 }
