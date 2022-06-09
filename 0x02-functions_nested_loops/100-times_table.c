@@ -18,13 +18,38 @@ void print_times_table(int n)
 		for (i = 0; i <= max; i++)
 		{
 			h = i*l;
-			if (i < max)
+			if (h <= 9)
 			{
-				printf("%d, ", h);
+				if (i < max)
+				{
+					printf("  %d, ", h);
+				}
+				else if (i == max)
+				{
+					printf("  %d", h);
+				}
 			}
-			else if (i == max)
+			else if (h > 9 && h <= 99)
 			{
-				printf("%d", h);
+				if (i < max)
+				{
+					printf(" %d, ", h);
+				}
+				else if (i == max)
+				{
+					printf(" %d", h);
+				}
+			}
+			else if(h > 99)
+			{
+				if (i < max)
+				{
+					printf("%d, ", h);
+				}
+				else if (i == max)
+				{
+					printf("%d", h);
+				}
 			}
 		}
 		printf("\n");
