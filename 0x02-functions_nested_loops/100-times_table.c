@@ -16,7 +16,7 @@ void print_times_table(int n)
 	int z = 0;
 	for (l = 0; l <= max; l++)
 	{
-		printf("%d", z);
+		printf("%d, ", z);
 		for (i = 1; i <= max; i++)
 		{
 			h = i*l;
