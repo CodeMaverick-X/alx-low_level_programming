@@ -11,11 +11,12 @@
 void print_times_table(int n)
 {
 	int l;
-	int max = nu;
+	int max = n;
 	int i, h;
+	int z = 0;
 	for (l = 0; l <= max; l++)
 	{
-		printf(0, );
+		printf("%d", z);
 		for (i = 1; i <= max; i++)
 		{
 			h = i*l;
