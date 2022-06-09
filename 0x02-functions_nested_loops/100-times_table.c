@@ -12,7 +12,7 @@ void print_times_table(int n)
 {
 	int l;
 	int max = n;
-	int i;
+	int i, h;
 	for (l = 0; l <= max; l++)
 	{
 		for (i = 0; i <= max; i++)
@@ -22,7 +22,7 @@ void print_times_table(int n)
 			{
 				printf("%d, ", h);
 			}
-			else if (i = max)
+			else if (i == max)
 			{
 				printf("%d", h);
 			}
