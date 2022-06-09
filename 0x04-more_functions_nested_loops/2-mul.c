@@ -9,7 +9,7 @@
  * Return: result of multiplication
  */
 
-mul(int a, int b)
+int mul(int a, int b)
 {
 	int c;
 	c = a * b;
