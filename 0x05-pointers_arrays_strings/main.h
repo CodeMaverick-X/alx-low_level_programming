@@ -4,5 +4,6 @@
 void _puts(char *str);
 int _putchar(int);
 void print_rev(char *s);
+void puts_half(char *str);
 
 #endif
