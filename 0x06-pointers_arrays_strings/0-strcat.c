@@ -14,30 +14,19 @@ char *_strcat(char *dest, char *src)
 {
 	int l = 0;
 	int x = 0;
-	int n;
-	int m; 
 
-	for (; *(dest + l) != '\0';)
+	for (; dest[l] != '\0';)
 	{
 		l++;
 	}
 
-	for (; *(src + x) != '\0';)
+	for (; src[x] != '\0';)
 	{
+		dest[l] = src[x];
+		l++;
 		x++;
 	}
+	dest[l] = '\0';
 
-
-	for (n = 0; n < l; n++)
-	{
-		cncat[n] = dest[n];
-	}
-	
-
-	for (m = 0; m < x; m++)
-	{
-		cncat[m + n] = src[m];
-	}
-
-	return (cncat);
+	return (dest);
 }
