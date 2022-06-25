@@ -8,7 +8,6 @@
  *
  * Return: 1, if its a number, else 0
  */
-
 int ispositive(char *a)
 {
 	int i, len, num;
@@ -28,7 +27,6 @@ int ispositive(char *a)
 	}
 	return (num);
 }
-
 /**
  * main - adds inpute
  *
@@ -37,7 +35,6 @@ int ispositive(char *a)
  *
  * Return - int
  */
-
 int main(int argc, char *argv[])
 {
 	int i, sum, num;
