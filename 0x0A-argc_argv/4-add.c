@@ -5,7 +5,6 @@
 /**
  * ispositive - checks if the number is poositive
  * @a: char to be checked
- *
  * Return: 1, if its a number, else 0
  */
 int ispositive(char *a)
@@ -29,11 +28,9 @@ int ispositive(char *a)
 }
 /**
  * main - adds inpute
- *
  * @argc: coutn
  * @argv: vector
- *
- * Return - int
+ * Return: int
  */
 int main(int argc, char *argv[])
 {
