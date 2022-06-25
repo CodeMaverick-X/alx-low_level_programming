@@ -10,9 +10,9 @@
 int ispositive(char *a)
 {
 	int i, len, num;
+
 	len = strlen(a);
 	num = 0;
-
 	for (i = 0; i < len; i++)
 	{
 		if (a[i] < '0' || a[i] > '9')
@@ -35,8 +35,8 @@ int ispositive(char *a)
 int main(int argc, char *argv[])
 {
 	int i, sum, num;
-	sum = 0;
 
+	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
 		num = ispositive(argv[i]);
