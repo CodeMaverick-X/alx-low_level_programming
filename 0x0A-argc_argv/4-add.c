@@ -27,14 +27,11 @@ int ispositive(char *a)
 		}
 	}
 	return (num);
-
 }
 
 /**
  * main - adds inpute
- * @i: for loop tracker
- * @sum: sumation of inputed num
- * @num: number per sting
+ *
  * @argc: coutn
  * @argv: vector
  *
@@ -60,4 +57,4 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", sum);
 	return (0);
-}	
+}
