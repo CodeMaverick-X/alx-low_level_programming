@@ -4,7 +4,7 @@
 /**
  * *_strdup - pointer to new space in mem
  *
- * @*str: string
+ * @str: string
  *
  * Return: character
  */
@@ -17,11 +17,12 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 1; str[i] != '\0';)
+	for (i = 0; str[i] != '\0';)
 	{
 		i++;
 	}
-	
+	i++;
+
 	strDup = malloc(sizeof(char) * i);
 
 	if (strDup == NULL)
