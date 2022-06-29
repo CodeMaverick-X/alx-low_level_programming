@@ -10,17 +10,14 @@
 
 char *argstostr(int ac, char **av)
 {
-/* count the number of char in each string */
 
 	int i, j, size, v;
-
 	char *scat;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	size = 0;
-
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
@@ -31,26 +28,18 @@ char *argstostr(int ac, char **av)
 	}
 	size++;
 
-/* allocate memory for total numvber of char
- *
- */
-
 	scat = malloc(sizeof(char) * size);
 	if (scat == NULL)
 		return (NULL);
-
 	v = 0;
-
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			scat[v++] = av[i][j];
 		}
+		scat[v++] = '\n';
 	}
-
 	scat[v] = '\0';
-
 	return (scat);
-
 }
