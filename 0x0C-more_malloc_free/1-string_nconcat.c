@@ -1,50 +1,39 @@
+#include "main.h"
 #include <stdlib.h>
 /**
- * string_nconcat - function that concatenates two strings
- *
+ * *string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
- * @n: number
- *
- * Retern: ppinter to new string location
+ * @n: limit of s2
+ * Return: pointer to new space in memory or null
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int j, i, k;
-
-	char *str;
+	char *strDup;
+	int i;
+	unsigned int j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	for (i = 0; s1[i] != '\n';)
+	i = 0;
+	while (s1[i] != '\0')
+		i++;
+	strDup = malloc(sizeof(char) * (i + n + 1));
+	if (strDup == NULL)
+		return (NULL);
+	i = j = 0;
+	while (s1[i] != '\0')
 	{
+		strDup[i] = s1[i];
 		i++;
 	}
-
-	for (j = 0; j < n && s2[j] != '\n';)
+	while (j < n && s2[j] != '\0')
 	{
-		j++;
+		strDup[i] = s2[j];
+		i++, j++;
 	}
-
-	str = malloc(i + j + 1);
-	if (str == NULL)
-		return (NULL);
-	for (k = 0; s1[k] != '\0'; k++)
-	{
-		str[k] = s1[k];
-	}
-
-	for (i = 0; i < n && s2[i] != '\0'; i++)
-	{
-		str[k] = s2[i];
-		k++;
-	}
-	str[k] = '\0';;
-
-	return (str);
-
+	strDup[i] = '\0';
+	return (strDup);
 }
