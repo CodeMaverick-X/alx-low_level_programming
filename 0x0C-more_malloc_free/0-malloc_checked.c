@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * malloc_checked - function that allocat
  * @b: intiger
