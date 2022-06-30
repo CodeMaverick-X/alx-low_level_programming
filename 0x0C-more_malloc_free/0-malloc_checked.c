@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * *malloc_checked - function that allocates memory
+ * malloc_checked - function that allocates memory
  *
  * @b: intiger
  *
