@@ -15,12 +15,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d1 = malloc(sizeof(dog_t));
 	if (d1 == NULL)
 		return (NULL);
-/*get the lenght of the string owner and name*/
 	for (size_nm = 0; name[size_nm] != '\0';)
 		size_nm++;
 	for (size_own = 0; name[size_own] != '\0';)
 		size_own++;
-/*allocate space for the member name and owner*/
 	d1->name = malloc(size_nm * sizeof(d1->name));
 	if (d1->name == NULL)
 	{
@@ -34,12 +32,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d1);
 		return (NULL);
 	}
-/*initialize the values of the strings*/
 	for (i = 0; i <= size_nm; i++)
 		d1->name[i] = name[i];
 	for (i = 0; i <= size_own; i++)
 		d1->owner[i] = owner[i];
 	d1->age = age;
 	return (d1);
-
 }
