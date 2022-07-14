@@ -10,7 +10,7 @@
  */
 typedef struct list_s
 {
-	char str;
+	char *str;
 	unsigned int len;
 	list_t next;
 } list_t;
