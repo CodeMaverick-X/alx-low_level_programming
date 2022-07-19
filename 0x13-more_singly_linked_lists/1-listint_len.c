@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "lists..h"
+#include "lists.h"
 #include <stdlib.h>
 /**
  * listint_len - function that prints all the elements of a list
@@ -10,7 +10,7 @@ size_t listint_len(const listint_t *h)
 {
 	size_t n = 0;
 
-	for (h != NULL)
+	while (h != NULL)
 	{
 		n++;
 		h = h->next;
