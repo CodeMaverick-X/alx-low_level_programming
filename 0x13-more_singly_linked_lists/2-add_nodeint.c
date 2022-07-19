@@ -2,8 +2,9 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * listint_len - function that prints all the elements of a list
- * @h: list head
+ * add_nodeint - function that prints all the elements of a list
+ * @head: list head
+ * @n: intiger value
  * Return: the number of nodes
  */
 listint_t *add_nodeint(listint_t **head, const int n)
