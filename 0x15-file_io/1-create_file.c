@@ -9,12 +9,12 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, r = 0, w;
+	int fd, w, r = 0;
 
 	if (!filename)
 		return (-1);
 
-	fd = open(filename, O_CREAT, 600);
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	if (fd < 0)
 		return (-1);
 
