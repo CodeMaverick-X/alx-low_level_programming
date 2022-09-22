@@ -20,7 +20,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	{
 		hash = ((hash << 5) + hash) + c;
 	}
-	
+
 	indx = hash % size;
 
 	return (indx);
