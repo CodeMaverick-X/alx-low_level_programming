@@ -10,20 +10,17 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *table;
+	hash_table_t *ht;
 
-	if (size == 0)
+
+	ht = malloc(sizeof(hash_table_t));
+	if (ht == NULL)
 		return (NULL);
 
-
-	table = malloc(sizeof(hash_table_t));
-	if (table == NULL)
+	ht->size = size;
+	ht->array = calloc((size_t)ht->size, sizeof(hash_node_t *));
+	if (ht->array == NULL)
 		return (NULL);
 
-	table->size = size;
-	table->array = calloc((size_t)table->size, sizeof(hash_node_t *));
-	if (table->array == NULL)
-		return (NULL);
-
-	return (table);
+	return (ht);
 }
