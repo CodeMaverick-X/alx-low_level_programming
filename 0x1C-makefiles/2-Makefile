@@ -1,16 +1,15 @@
 #make_file
 
-all: school
-
 CC= gcc
 SRC= main.c shool.c
+OBJ= *.o
 NAME= school
+
+all: $(NAME)
+
+school: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 
 %.o: %.c
 	$(CC) -c -o $@  $<
-
-OBJ= main.o school.o
-
-school: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
