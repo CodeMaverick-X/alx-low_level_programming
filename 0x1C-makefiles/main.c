@@ -5,7 +5,7 @@ int print_name(char *name);
 int main(void)
 {
 	printf("hello world\n");
-	print_name("boy");
+	print_name("reinhard");
 
 	return (0);
 }
