@@ -17,7 +17,9 @@ def island_perimeter(grid):
         for j, k in enumerate(i):
             length_w = len(i)
             if k == 1:
-                if j == length_w - 1 or j == 0:
+                if j == length_w - 1:
+                    per += 1
+                if j == 0:
                     per += 1
                 if j != 0:
                     if i[j - 1] == 0:
@@ -30,6 +32,12 @@ def island_perimeter(grid):
                         per += 1
                     if grid[n + 1][j] == 0:
                         per += 1
-                elif n == 0 or n == length__h - 1:
+                if n == 0:
                     per += 1
+                    if  length__h > 1 and grid[n + 1][j] == 0:
+                        per += 1
+                if n == length__h - 1:
+                    per += 1
+                    if grid[n - 1][j] == 0:
+                        per += 1
     return per
