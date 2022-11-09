@@ -1,11 +1,9 @@
 #make_file
 
 CC:= gcc
-SRC:= $(wildcard *.c)
+SRC:= main.c school.c
 
-BINS := $(SRCS:%.c=%)
-
-all: ${BINS}
+all: school
 
 school: main.c school.c
 	${CC} ${SRC} -o school
