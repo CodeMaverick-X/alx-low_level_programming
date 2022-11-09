@@ -10,6 +10,9 @@ def island_perimeter(grid):
     per = 0
     length__h = len(grid)
 
+    if length__h == 0 or not isinstance(grid, list):
+        return
+
     for n, i in enumerate(grid):
         for j, k in enumerate(i):
             length_w = len(i)
