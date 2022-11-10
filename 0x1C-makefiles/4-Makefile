@@ -18,12 +18,12 @@ $(NAME): $(OBJ)
 
 
 clean:
-	$(RM) -f *.swp *.~ $(NAME)
+	$(RM) -f *.swp *~ $(NAME)
 
 oclean:
 	$(RM) -f $(OBJ)
 
 fclean:
-	$(RM) -f *.swp *.~ $(OBJ)
+	$(RM) -f *.swp *~ $(OBJ)
 
 re: oclean all
