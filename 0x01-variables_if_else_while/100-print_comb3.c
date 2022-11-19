@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ * main - random print guess what it does
+ * Return: 0 always
+ */
 
 int main(void)
 {
