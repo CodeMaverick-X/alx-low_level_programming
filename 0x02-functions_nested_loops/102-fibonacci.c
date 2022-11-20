@@ -31,5 +31,6 @@ int main(void)
 	unsigned int long n = 50;
 
 	printFibonacci(n);
+	printf("\n");
 	return (0);
 }
