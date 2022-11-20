@@ -1,23 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - prnts fibonacci to 50
- * Return: 0
+ * printFibonacci - prnts fibonacci to 50
+ * @n: ammount to print
+ * Return: void
  */
-void printFibonacci(unsigned long int n){    
-	static unsigned long int n1=0,n2=1,n3;
+void printFibonacci(unsigned long int n)
+{
+	static unsigned long int n1 = 0, n2 = 1, n3;
 
-	if(n>0)
+	if (n > 0)
 	{
 		n3 = n1 + n2;
 		n1 = n2;
 		n2 = n3;
-		printf("%ld ",n3);
-		printFibonacci(n-1);
+		printf("%ld ", n3);
+		printFibonacci(n - 1);
 	}
 }
-int main(){
+/**
+ * main - print
+ * Return: 0
+ */
+
+int main(void)
+{
 	unsigned int long n = 50;
+
 	printFibonacci(n);
- 	return 0;
- }    
+	return (0);
+}
