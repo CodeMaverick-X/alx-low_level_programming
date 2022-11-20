@@ -14,7 +14,10 @@ void printFibonacci(unsigned long int n)
 		n3 = n1 + n2;
 		n1 = n2;
 		n2 = n3;
-		printf("%ld ", n3);
+		if (n3 != 1)
+			printf(", %ld", n3);
+		else
+			printf("%ld", n3);
 		printFibonacci(n - 1);
 	}
 }
