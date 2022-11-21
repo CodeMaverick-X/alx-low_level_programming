@@ -19,7 +19,7 @@ void print_number(int n)
 		m = m % 10;
 		a = toascii(m + 48);
 		if (m  != 0 && a < 58 && a >= 48)
-			putchar(a);
+			_putchar(a);
 		k = k / 10;
 	}
 
