@@ -9,6 +9,8 @@
  */
 int main(void)
 {
+	int *array1 = NULL;
+	size_t size1 = 7;
     int array[] = {
         10, 1, 42, 3, 4, 42, 6, 7, -1, 9
     };
@@ -17,5 +19,7 @@ int main(void)
     printf("Found %d at index: %d\n\n", 3, linear_search(array, size, 3));
     printf("Found %d at index: %d\n\n", 42, linear_search(array, size, 42));
     printf("Found %d at index: %d\n", 999, linear_search(array, size, 999));
+	printf("----------------------- \n");
+	printf("Found %d at index: %d\n", 4, linear_search(array1, size1, 4));
     return (EXIT_SUCCESS);
 }
