@@ -10,7 +10,7 @@
 int main(void)
 {
 	int *array1 = NULL;
-	size_t size1 = 7;
+	size_t size1 = 0;
     int array[] = {
         10, 1, 42, 3, 4, 42, 6, 7, -1, 9
     };
