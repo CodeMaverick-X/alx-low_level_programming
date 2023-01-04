@@ -1,6 +1,5 @@
 #include "search_algos.h"
 #include <math.h>
-
 /**
  * jump_search - searches for a value in a sorted array
  * of integers using jumnp search
@@ -10,28 +9,41 @@
  * @value: value to search for
  * Return: returns the index of value if found or -1 otherwise
  */
+
 int jump_search(int *array, size_t size, int value)
 {
-	int diff, tmp, jmp_linear = 0;
-	int jump_step;
+	int j, low = 0;
+	int block = sqrt((int)size), high = low + block;
 
-	jump_step = sqrt((double)size);
-	for (tmp = 0; tmp < (int)size;)
+	if (!array)
+		return (-1);
+
+	while (high < (int)size)
 	{
-		printf("Value checked array[%d] = [%d]\n", tmp, array[tmp]);
-		if (array[tmp] >= value && jmp_linear == 0)
+		printf("Value checked array[%d] = [%d]\n", low, array[low]);
+		if (value >= array[low] && high < (int)size && value <= array[high])
 		{
-			diff = tmp - jump_step;
-			printf("Value found between indexes [%d] and [%d]\n", diff, tmp);
-			tmp -= jump_step;
-			jmp_linear = 1;
+			printf("Value found between indexes [%d] and [%d]\n", low, high);
+			for (j = low; j <= high; j++)
+			{
+				printf("Value checked array[%d] = [%d]\n", j, array[j]);
+				if (array[j] == value)
+					return (j);
+			}
 		}
-		if (value == array[tmp])
-			return (tmp);
-		else if (jmp_linear)
-			tmp++;
-		else if (jmp_linear == 0)
-			tmp += jump_step;
+		low = high;
+		high = high + block;
+	}
+	if (value >= array[low])
+	{
+		printf("Value checked array[%d] = [%d]\n", low, array[low]);
+		printf("Value found between indexes [%d] and [%d]\n", low, high);
+			for (j = low; j < (int)size; j++)
+			{
+				printf("Value checked array[%d] = [%d]\n", j, array[j]);
+				if (array[j] == value)
+					return (j);
+			}
 	}
 	return (-1);
 }
